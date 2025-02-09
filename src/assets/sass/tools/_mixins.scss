@@ -1,0 +1,137 @@
+@use "sass:map";
+@use "../base/variables" as *;
+
+@mixin flex($justify: center, $align: center, $direction: row) {
+  & {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
+}
+
+@mixin grid($columns, $gap, $justify) {
+  & {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($columns, 1fr));
+    gap: $gap;
+    justify-items: $justify;
+  }
+}
+
+@mixin font-style($type) {
+  & {
+    font-size: map.get($font-sizes, $type);
+    font-family: map.get($font-families, $type);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
+
+@mixin breakpoint($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (max-width: map.get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @error "El tamaño `#{$size}` no está definido en los breakpoints.";
+  }
+}
+
+@mixin sign-in-theme($theme) {
+  & {
+    @if $theme == "dark" {
+      background: linear-gradient(
+        415deg,
+        $dark-bg-gradient-start,
+        $dark-bg-gradient-end
+      );
+      box-shadow: -2px -2px 15px $dark-accent,
+        2px 2px 15px $dark-box-shadow-light;
+    } @else if $theme == "light" {
+      background: linear-gradient(
+        415deg,
+        $light-bg-gradient-start,
+        $light-bg-gradient-end
+      );
+      box-shadow: -2px -2px 15px $light-accent,
+        2px 2px 15px $light-box-shadow-light;
+    }
+  }
+}
+
+@mixin card-theme($theme) {
+  & {
+    @if $theme == "dark" {
+      background: linear-gradient(
+        415deg,
+        $dark-bg-gradient-start,
+        $dark-bg-gradient-end
+      );
+    } @else if $theme == "light" {
+      background: linear-gradient(
+        415deg,
+        $light-bg-gradient-start,
+        $light-bg-gradient-end
+      );
+    }
+  }
+}
+
+@mixin sign-in-color-scheme {
+  @media (prefers-color-scheme: dark) {
+    @include sign-in-theme("dark");
+  }
+  @media (prefers-color-scheme: light) {
+    @include sign-in-theme("light");
+  }
+}
+
+@mixin card-color-scheme {
+  @media (prefers-color-scheme: dark) {
+    @include card-theme("dark");
+  }
+  @media (prefers-color-scheme: light) {
+    @include card-theme("light");
+  }
+}
+
+@mixin light-theme {
+  --primary: #{$light-primary};
+  --secondary: #{$light-secondary};
+  --primary-text: #{$light-primary-text};
+  --secondary-text: #{$light-secondary-text};
+  --border: #{$light-box-shadow-dark};
+  --success: #{$light-success};
+  --error: #{$light-error};
+  --info: #{$light-info};
+  --accent: #{$light-accent};
+  --card: #{$light-bg-gradient-end};
+}
+
+@mixin dark-theme {
+  --primary: #{$dark-primary};
+  --secondary: #{$dark-secondary};
+  --primary-text: #{$dark-primary-text};
+  --secondary-text: #{$dark-secondary-text};
+  --border: #{$dark-box-shadow-light};
+  --success: #{$dark-success};
+  --error: #{$dark-error};
+  --info: #{$dark-info};
+  --accent: #{$dark-accent};
+  --card: #{$dark-bg-gradient-end};
+}
+
+@mixin color-scheme {
+  @media (prefers-color-scheme: light) {
+    :root {
+      @include light-theme;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      @include dark-theme;
+    }
+  }
+}

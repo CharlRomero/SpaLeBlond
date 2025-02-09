@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <section id="app">
+    <NavBar />
+    <main>
+      <section class="content" id="home">
+        <HomeView />
+      </section>
+      <section class="content" id="servicios">
+        <ServiciosView />
+      </section>
+      <section class="content" id="contacto">
+        <ContactoView />
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Spa Relax. Todos los derechos reservados.</p>
+    </footer>
+  </section>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from './components/NavBar.vue';
+import HomeView from './view/HomeView.vue';
+import ServiciosView from './view/ServiciosView.vue';
+import ContactoView from './view/ContactoView.vue';
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    NavBar,
+    HomeView,
+    ServiciosView,
+    ContactoView
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

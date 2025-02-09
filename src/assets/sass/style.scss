@@ -1,0 +1,13 @@
+// @forward "./layouts/layouts.scss";
+@use "./components/components.scss";
+@use "./view/view.scss";
+
+@use "./base/reset";
+@use "./tools/mixins" as *;
+
+@include color-scheme; // Aplica el esquema de color
+
+body {
+  background-color: var(--second-color);
+  color: var(--primary-text);
+}

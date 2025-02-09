@@ -1,0 +1,38 @@
+@use "../tools/mixins" as mixin;
+
+.CardServicio {
+  width: 21.875rem;
+  border-radius: 0.625rem;
+  padding: 0.625rem;
+  border: 1px solid var(--secondary);
+  @include mixin.card-color-scheme;
+  &-img {
+    height: 12.5rem;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    overflow: hidden;
+    &-fit {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-info {
+    padding: 0.3125rem 0 0.3125rem;
+    @include mixin.flex(center, flex-start, column);
+  }
+  &-h3 {
+    @include mixin.font-style("title");
+  }
+  &-p {
+    @include mixin.font-style("text");
+  }
+  &-foot {
+    @include mixin.font-style("info");
+    @include mixin.flex(center, flex-end, column);
+  }
+  &-price {
+    font-size: 2em;
+    font-weight: 600;
+  }
+}

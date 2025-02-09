@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+$font-families: (
+  "big-title": "Playfair Display",
+  "title": "Playfair Display",
+  "subtitle": "Poppins",
+  "text": "Lora",
+  "info": "Montserrat",
+  "button": "Nunito",
+);
+
+$font-sizes: (
+  "big-title": 4em,
+  "title": 2em,
+  "subtitle": 1.5em,
+  "text": 1em,
+  "info": 0.875em,
+  "button": 1.125em,
+);
+
+$breakpoints: (
+  xs: 480px,
+  sm: 904px,
+  md: 1024px,
+  lg: 1440px,
+  xl: 1920px,
+);
+
+// Variables de colores para el tema claro
+$light-primary: #d4af37; // Dorado brillante
+$light-secondary: #c0c0c0; // Plateado elegante
+$light-primary-text: #1a1a1a; // Negro intenso para textos principales
+$light-secondary-text: #4a4a4a; // Gris oscuro para textos secundarios
+$light-success: #27ae60; // Verde esmeralda (bienestar)
+$light-error: #c0392b; // Rojo elegante para alertas
+$light-info: #8e8e8e; // Gris neutro para información
+$light-bg-gradient-start: #ffffff; // Blanco puro
+$light-bg-gradient-end: #f4f4f4; // Gris muy claro
+$light-box-shadow-dark: #b0b0b0; // Sombra gris clara
+$light-box-shadow-light: #ffffff; // Blanco brillante
+$light-accent: #e0c878; // Dorado suave para detalles
+
+// Variables de colores para el tema oscuro
+$dark-primary: #b8860b; // Dorado oscuro
+$dark-secondary: #a8a8a8; // Plateado apagado
+$dark-primary-text: #f5f5f5; // Blanco suave para textos principales
+$dark-secondary-text: #d1d1d1; // Gris claro para textos secundarios
+$dark-success: #1e8449; // Verde bosque profundo
+$dark-error: #922b21; // Rojo vino elegante
+$dark-info: #7f8c8d; // Gris metálico
+$dark-bg-gradient-start: #121212; // Negro carbón
+$dark-bg-gradient-end: #1c1c1c; // Negro profundo
+$dark-box-shadow-dark: #0a0a0a; // Sombra negra
+$dark-box-shadow-light: #383838; // Gris oscuro para profundidad
+$dark-accent: #e0c878; // Dorado refinado para detalles

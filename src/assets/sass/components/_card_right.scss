@@ -1,0 +1,42 @@
+@use "../tools/mixins" as mixin;
+
+.CardRight {
+  padding: 0.625rem;
+  gap: 1.25rem;
+  @include mixin.flex;
+  &-img {
+    height: 31.25rem;
+    width: 75.625rem;
+    border: 2px solid var(--accent);
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    overflow: hidden;
+    &-fit {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-info {
+    height: 100%;
+    @include mixin.flex(flex-start, flex-start, column);
+    gap: 3.125rem;
+  }
+  &-h3 {
+    @include mixin.font-style("title");
+  }
+  &-p {
+    @include mixin.font-style("text");
+  }
+  &-foot {
+    @include mixin.font-style("info");
+    @include mixin.flex(center, flex-start, column);
+  }
+  &-price {
+    font-size: 2em;
+    font-weight: 600;
+  }
+  &-text {
+    height: 18.75rem;
+  }
+}

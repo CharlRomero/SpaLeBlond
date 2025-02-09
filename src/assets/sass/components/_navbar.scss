@@ -1,0 +1,24 @@
+@use "../tools/mixins" as mixin;
+
+.NavBar {
+  background-color: var(--bg-gradient-start);
+  height: 3.125rem;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  @include mixin.font-style("text");
+  @include mixin.sign-in-color-scheme;
+  @include mixin.flex;
+  &-ul {
+    gap: 0.3125rem;
+    @include mixin.flex;
+  }
+  &-li {
+    color: var(--primary-text);
+    transition: color 0.3s;
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
